@@ -1,0 +1,49 @@
+{{ partial "header.html" . }}
+<body {{ with .CurrentSection }}{{ if or .RegularPages .Sections }}class="bg-super-light"{{ end }}{{ end }}>
+{{ partial "navbar.html" . }}
+<div class="container-fluid">
+  <div class="row">  
+    <div class="col-lg-3 bg-light cd-sidebar navbar-expand-lg">
+      {{ partial "sidebar.html" . }}
+    </div>
+    <div class="col-lg-7 cd-content">
+      <div id="content">
+        {{ .Content }}
+        <div class="card-deck d-block d-md-flex list-page-cards">
+          {{ range where .Pages ".Params.type" "ne" "json" }}
+            {{ if eq .Params.hidecards true }}
+              {{ range where .Pages ".Params.type" "ne" "json" }}
+                {{ if eq .File.LogicalName "introduction.md" }}
+                <div class="card d-block d-md-flex mb-4">
+                  <a class="card-link" href="{{ .Permalink }}"></a>
+                  <div class="card-body">
+                    <div class="card-text">
+                    <h4 class="card-title">{{ .Title }}</h4>
+                    <p class="read-link">Read now <i class="fas fa-arrow-right"></i></p>
+                    </div>  
+                  </div>  
+                </div>  
+                {{ end }}
+              {{ end }}
+            {{ else }}
+              <div class="card d-block d-md-flex mb-4">
+                <a class="card-link" href="{{ .Permalink }}"></a>
+                <div class="card-body">
+                  <div class="card-text">
+                  <h4 class="card-title">{{ .Title }}</h4>
+                  <p class="read-link">Read now <i class="fas fa-arrow-right"></i></p>
+                  </div>  
+                </div>  
+              </div>
+              {{ end }}
+            {{ end }} 
+        </div>
+        {{ partial "footer.html" . }}
+      </div>
+    </div>
+  </div>
+</div>
+{{ partial "docsearch.html" . }}
+<script src="//js.hs-scripts.com/7070466.js" type="text/javascript" async defer id="hs-script-loader"></script>
+</body>
+</html>

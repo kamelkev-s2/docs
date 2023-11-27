@@ -1,0 +1,16 @@
+<nav class="sticky-top navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="https://www.selector.ai/"><img src="https://www.selector.ai/wp-content/uploads/2023/09/selector-logo-for-dark-background.svg" alt="Selector" /></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button> 
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav" id="normal-links">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Docs Home</a>
+      </li>
+    </ul>
+  </div>
+  {{ if not .IsHome }}
+  <div id="docsearch-div"></div>
+  {{ end }}  
+</nav>

@@ -1,0 +1,19 @@
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@alpha"></script>
+<script type="text/javascript"> docsearch({
+    container: '#docsearch-div',
+    appId: '',
+    apiKey: '',
+    indexName: 'selector',
+    transformData: function(hits) {
+      if (window.location.hostname !== 'docs.selector.ai') {
+        for (index = 0; index < hits.length; index++) { 
+          hits[index].url = hits[index].url.replace('https://docs.selector.ai','');
+        } 
+      }
+    },
+    algoliaOptions: {
+      hitsPerPage: 10,
+    },
+    debug: false // Set debug to true if you want to inspect the dropdown
+});
+</script>

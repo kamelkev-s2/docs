@@ -1,0 +1,65 @@
+{{ partial "header.html" . }}
+<body>
+{{ partial "navbar.html" . }}
+
+<div class="container-fluid heatmap-section py-150px">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col text-center">
+                <h1 class="text-light mt-0 mb-4">Welcome to Selector Docs!</h1>
+                <div class="center-block" id="docsearch-div"></div>
+            </div>
+        </div>
+    </div>  
+</div>
+
+<div class="container-fluid bg-light py-80px">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center mb-5">
+                <h2 class="heading-with-center-bar">Popular Topics</h2>
+            </div>
+        </div>    
+        <div class="row">
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="docs-topic">
+                    <a class="docs-topic-link" href="/selector/getting-started/"></a>
+                    <h4>Getting Started</h4>
+                    <div class="docs-topic-arrow"><i class="fas fa-caret-right"></i></div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+                <div class="docs-topic">
+                    <a class="docs-topic-link" href="/selector/alerts/"></a>
+                    <h4>Alerts</h4>
+                    <div class="docs-topic-arrow"><i class="fas fa-caret-right"></i></div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-0">
+                <div class="docs-topic">
+                    <a class="docs-topic-link" href="/selector/administration/"></a>
+                    <h4>Administration</h4>
+                    <div class="docs-topic-arrow"><i class="fas fa-caret-right"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid prefooter-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7">
+                <h3 class="h2 text-light mt-0">Can't find something?</h3>
+                <p class="text-light">Reach out to our friendly team of engineers. We’ll be happy to help.</p>
+            </div>
+        </div>
+    </div>
+</div>            
+
+<div class="text-center">
+    {{ partial "footer.html" . }}
+</div>
+{{ partial "docsearch.html" . }}
+</body>
+</html>

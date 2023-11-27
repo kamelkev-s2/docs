@@ -1,0 +1,14 @@
+baseURL: https://docs.selector.ai/
+languageCode: en-us
+title: Selector Documentation
+canonifyURLs: true
+disableKinds: ["RSS"]
+verbose: true
+verboseLog: true
+
+#deployment:
+#  targets:
+#    name: docs.selector.ai
+#    URL: gs://docs.selector.ai
+
+#menu:

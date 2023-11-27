@@ -1,0 +1,34 @@
+{{ partial "header.html" . }}
+<body>
+{{ partial "navbar.html" . }}
+<div class="container-fluid">
+    {{ if .IsDescendant .FirstSection }}
+        <div class="row">
+            <div class="col-lg-3 bg-light cd-sidebar navbar-expand-lg">
+                {{ partial "sidebar.html" . }}
+            </div>
+            <div class="col-lg-7 cd-content">
+                <div id="content" class="DocSearch-content">
+                    {{ .Content }}
+                    {{ partial "footer.html" . }}
+                </div>
+            </div>
+            <div class="d-none d-lg-flex col-lg-2 cd-sidenav">
+                {{ partial "sidenav.html" . }}
+            </div>
+        </div>    
+    {{ else }}
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7 cd-content d-lg-flex justify-content-center">
+                <div id="content">
+                    {{ .Content }}
+                    {{ partial "footer.html" . }}
+                </div>
+            </div>    
+        </div>    
+    {{ end }}
+</div>
+{{ partial "docsearch.html" . }}
+<script src="//js.hs-scripts.com/7070466.js" type="text/javascript" async defer id="hs-script-loader"></script>
+</body>
+</html>
