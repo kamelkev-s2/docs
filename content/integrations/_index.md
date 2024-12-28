@@ -1,12 +1,9 @@
 ---
-title: Selector
-weight: 10
+title: Integrations
+weight: 120
 ---
 
-# Selector
-
 # Integrations
-
 
 <div class="row">
     <div class="col-lg-3 bg-light cd-sidebar navbar-expand-lg">

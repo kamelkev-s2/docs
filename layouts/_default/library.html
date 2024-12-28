@@ -11,7 +11,7 @@
                 <div id="content" class="DocSearch-content">
                     <h1>Library</h1>
                     <h2 id="supported-integrations">Supported Integrations<a class="heading-link" href="#supported-integrations"></a></h2>
-                    <p>Integrations connect third-party services to Circonus. Below you'll find a complete list of the supported integrations within our library. Click on each integration for more details and configuration instructions.</p>
+                    <p>Integrations connect third-party services to Selector. Below you'll find a complete list of the supported integrations within our library. Click on each integration for more details and configuration instructions.</p>
                     <p>Premium integrations, which are denoted by lightening bolt icon ( <i class="fas fa-bolt accent-color"></i> ), generate their own service dashboards upon installaion.</p> 
                     <div class="card-deck">
                         {{ range where .RegularPages ".Params.legacy" "!=" true  }}
@@ -22,21 +22,6 @@
                                 </div>
                                 <div class="card-body">
                                     {{ with .Params.premium }}<i class="fas fa-bolt accent-color"></i>{{ end }} <span class="card-title">{{ .Title }}</span>
-                                </div>
-                            </div>
-                        {{ end }}
-                    </div>
-                    <h2 id="legacy-integrations">Legacy Integrations<a class="heading-link" href="#legacy-integrations"></a></h2>
-                    <div class="card-deck">
-                        {{ range where .RegularPages "Params.legacy" true }}
-                            <div class="card d-block integration-card">
-                                <a class="card-link" href="{{.Permalink}}"></a>
-                                <div class="card-top">
-                                    {{ with .Params.logo_light }}<img src="{{ . }}">{{ end }}
-                                </div>
-                                <div class="card-body">
-                                    {{ with .Params.premium }}<i class="fas fa-bolt accent-color"></i>{{ end }} <span class="card-title">{{ .Title }}</span>
-                                    {{ with .Params.legacy }}<span class="legacy-caption">Legacy Integration</span>{{ end }}
                                 </div>
                             </div>
                         {{ end }}
