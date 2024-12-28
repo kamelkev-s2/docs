@@ -6,9 +6,9 @@ disableKinds: ["RSS"]
 verbose: true
 verboseLog: true
 
-#deployment:
-#  targets:
-#    name: docs.selector.ai
-#    URL: gs://docs.selector.ai
+deployment:
+  targets:
+    name: docs.selector.ai
+    URL: gs://docs.selector.ai
 
 #menu:
