@@ -5,8 +5,6 @@ weight: 5
 
 # System Architecture
 
-## Overview
-
 The Selector platform is constructed around four functional layers:
 * Data Collection Engine - Entry point for data in the system.
 
